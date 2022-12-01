@@ -18,10 +18,6 @@ public class DayOne {
     public void firstPart() {
         if (input != null) {
 
-
-
-            StringBuilder inputText = new StringBuilder();
-
             Scanner myReader = null;
             try {
                 myReader = new Scanner(input);
@@ -31,26 +27,18 @@ public class DayOne {
 
             ArrayList<Integer> tempstore = new ArrayList<>();
             ArrayList<Integer> finalstore = new ArrayList<>();
-
-
             while (myReader.hasNextLine()) {
-
                 String data = myReader.nextLine();
                 if (data.isEmpty()) {
                     Integer sum = 0;
                     for(Integer d : tempstore)
                         sum += d;
                     finalstore.add(sum);
-
                     tempstore.clear();
                 } else {
                     tempstore.add(Integer.parseInt(data));
                 }
-
-
-
             }
-
 
             System.out.println(Collections.max(finalstore));
             Collections.sort(finalstore);
@@ -63,8 +51,6 @@ public class DayOne {
             }
 
             System.out.println(Sum);
-
-
 
         }
     }
